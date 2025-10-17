@@ -11,3 +11,10 @@ if uploaded_file is not None:
     df = preprocessor.preprocess(data)
 
     st.dataframe(df)    
+
+    user_list =df['user'].unique().tolist()
+    user_list.remove('notification')
+    user_list.sort()
+    user_list.insert(0,"Overall")
+
+    st.sidebar.selectbox("Show Analysis wrt",user_list)
