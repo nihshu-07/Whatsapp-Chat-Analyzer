@@ -61,3 +61,11 @@ if uploaded_file is not None:
         fig,ax = plt.subplots()
         ax.imshow(df_wc)
         st.pyplot(fig)
+
+
+        most_common_df = helper.most_common_words(selected_user,df)
+        st.title('Most Common Words')
+        fig,ax = plt.subplots()
+        ax.bar(most_common_df[0],most_common_df[1])
+        plt.xticks(rotation = 'vertical')
+        st.pyplot(fig)
