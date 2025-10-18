@@ -18,4 +18,7 @@ def fetch_stats(selected_user,df):
         links.extend(extractor.find_urls(message))
 
     return num_messages,len(words),num_media_omitted,len(links)
-    
+
+def most_busy_users(df):
+    x = df['user'].value_counts().head()
+    return x
