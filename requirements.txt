@@ -3,3 +3,4 @@ re
 pandas
 urlextract
 matplotlib
+wordcloud
