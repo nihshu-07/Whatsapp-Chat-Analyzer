@@ -2,3 +2,4 @@ Streamlit
 re
 pandas
 urlextract
+matplotlib
