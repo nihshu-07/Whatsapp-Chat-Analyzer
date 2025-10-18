@@ -11,8 +11,6 @@ if uploaded_file is not None:
     data = bytes_data.decode("utf-8")
     df = preprocessor.preprocess(data)
 
-    st.dataframe(df)    
-
     user_list =df['user'].unique().tolist()
     user_list.remove('notification')
     user_list.sort()
@@ -21,6 +19,8 @@ if uploaded_file is not None:
     selected_user= st.sidebar.selectbox("Show Analysis wrt",user_list)
 
     if st.sidebar.button("Show Analysis"):
+
+        st.title("Top Statistics")
 
         num_messages,words,num_media_omitted,links=helper.fetch_stats(selected_user,df)
 
@@ -41,6 +41,20 @@ if uploaded_file is not None:
         with col4:
             st.header("Links shared")
             st.title(links)
+
+        st.title("Monthly Timeline")
+        timeline = helper.monthly_timeline(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.plot(timeline['time'],timeline['message'],color = 'red')
+        plt.xticks(rotation = 'vertical')
+        st.pyplot(fig)
+
+        st.title("Daily Timeline")
+        daily_timeline = helper.daily_timeline(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.plot(daily_timeline['day'],daily_timeline['message'],color = 'pink')
+        plt.xticks(rotation = 'vertical')
+        st.pyplot(fig)
 
         if selected_user == 'Overall':
             st.title("Most Active Users")
@@ -73,3 +87,5 @@ if uploaded_file is not None:
         emoji_df = helper.emoji_helper(selected_user,df)
         st.title('Emoji Analysis')
         st.dataframe(emoji_df)
+
+        
