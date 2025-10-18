@@ -44,11 +44,20 @@ if uploaded_file is not None:
 
         if selected_user == 'Overall':
             st.title("Most Active Users")
-            x = helper.most_busy_users(df)
+            x, new_df = helper.most_busy_users(df)
             fig,ax = plt.subplots()
             
             col1,col2 = st.columns(2)
 
             with col1:
-                ax.bar(x.index,x.values)
+                ax.bar(x.index,x.values,color ='green')
                 st.pyplot(fig)
+
+            with col2:
+                st.dataframe(new_df)
+
+        st.title("WordCloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
