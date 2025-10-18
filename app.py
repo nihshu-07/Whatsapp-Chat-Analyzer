@@ -21,7 +21,7 @@ if uploaded_file is not None:
 
     if st.sidebar.button("Show Analysis"):
 
-        num_messages,words,num_media_omitted=helper.fetch_stats(selected_user,df)
+        num_messages,words,num_media_omitted,links=helper.fetch_stats(selected_user,df)
 
         col1, col2, col3, col4 = st.columns(4)
 
@@ -36,3 +36,7 @@ if uploaded_file is not None:
         with col3:
             st.header("Media shared")
             st.title(num_media_omitted)
+        
+        with col4:
+            st.header("Links shared")
+            st.title(links)
