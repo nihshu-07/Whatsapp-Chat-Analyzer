@@ -13,7 +13,9 @@ def fetch_stats(selected_user,df):
 
     num_media_omitted = df[df['message']=='<Media omitted>'].shape[0]
 
+    links = []
+    for message in df['message']:
+        links.extend(extractor.find_urls(message))
 
-
-    return num_messages,len(words),num_media_omitted
+    return num_messages,len(words),num_media_omitted,len(links)
     
