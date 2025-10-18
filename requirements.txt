@@ -5,3 +5,4 @@ urlextract
 matplotlib
 wordcloud
 collection
+emoji
