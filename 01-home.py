@@ -2,15 +2,27 @@ import streamlit as st
 
 st.markdown("""
     <div class="hero-section">
-        <div class="hero-title"><h1>💬 WhatsApp Chat Analyzer</h1></div>
-        <div class="hero-subtitle">Transform Your Conversations into Powerful Insights</div>
-        <p style="font-size: 1rem; color: #cbd5e1;">Analyze message patterns, discover trends, and understand your communication behavior with beautiful visualizations</p>
+        <div style="text-align: center;animation: slideInDown 0.8s ease;"><h1>💬 WhatsApp Chat Analyzer</h1></div>
+        <div style="text-align: center;color: #A19D9D"><h3>By : Niharika Tyagi</h3></div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="https://www.linkedin.com/in/niharikatyagi7/" style="color: #6366f1; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.color='#8b5cf6'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6366f1'; this.style.textDecoration='none';">
+                💬Linkedin
+            </a>
+            <a href="mailto:niharika.tyagi710@gmail.com" style="color: #6366f1; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.color='#8b5cf6'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6366f1'; this.style.textDecoration='none';">
+                📧 Email
+            </a>
+            <a href="https://github.com/nihshu-07" style="color: #6366f1; font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.color='#8b5cf6'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6366f1'; this.style.textDecoration='none';">
+                📈 Github
+            </a>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
+st.markdown("---")
+
 st.markdown("""
     <div class="about-section">
-        <div class="about-title"><h3>📖 About This Project</h3></div>
+        <div style="text-align: center;animation: slideInDown 0.8s ease;"><h3>📖 About This Project</h3></div>
         <div class="about-text">
             <span class="highlight">WhatsApp Chat Analyzer</span> is a powerful data analytics tool designed to extract meaningful insights from your WhatsApp conversations. Whether you're curious about your messaging habits, want to understand group dynamics, or simply explore your communication patterns, this tool provides comprehensive analysis with beautiful visualizations.
         </div>
@@ -22,6 +34,8 @@ st.markdown("""
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+st.markdown("---")
 
 st.markdown("<h2 style='text-align: center; color: #e2e8f0; margin: 3rem 0 2rem 0;'>✨ Key Features</h2>", unsafe_allow_html=True)
     
