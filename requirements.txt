@@ -1,8 +1,10 @@
-Streamlit
-re
+pip>=24.0
+setuptools
+wheel
+streamlit
 pandas
 urlextract
 matplotlib
+seaborn
 wordcloud
-collection
 emoji
