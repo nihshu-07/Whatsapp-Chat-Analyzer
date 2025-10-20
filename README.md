@@ -6,7 +6,7 @@ Transform your WhatsApp conversations into powerful insights with beautiful visu
 
 ## 🎯 Overview
 
-WhatsApp Chat Analyzer is an interactive web application that extracts meaningful insights from your WhatsApp conversations. Visualize message patterns, discover trends, understand communication behavior, and much more – all with a beautiful, intuitive interface.
+WhatsApp Chat Analyzer is an interactive web application that extracts meaningful insights from your WhatsApp conversations. Visualize message patterns, discover trends, understand communication behavior, and much more  all with a beautiful, intuitive interface.
 🔒 Privacy First: Your data is processed locally and never stored on external servers. Complete privacy guaranteed!
 
 ---
@@ -25,12 +25,12 @@ WhatsApp Chat Analyzer is an interactive web application that extracts meaningfu
 
 - Total messages, words, media shared, and links exchanged
 - Quick overview of your conversation metrics
-- Per-user breakdown for group chats
+- Per user breakdown for group chats
 
 ### 📈 Timeline Analysis
 
 - Monthly Timeline: See how your messaging activity changes month by month
-- Daily Timeline: Understand your day-to-day communication patterns
+- Daily Timeline: Understand your day to day communication patterns
 - Smooth interactive charts with trend visualization
 
 ### 🔥 Activity Heatmap
@@ -98,7 +98,7 @@ View all your insights across different tabs
 - Step 5: Explore Tabs
 
 Timeline: Monthly and daily message trends
-Activity: Day-wise and month-wise activity patterns with heatmaps
+Activity: Day-wise and month wise activity patterns with heatmaps
 Top Users: Most active members (group chats only)
 Word Cloud: Visual representation of your vocabulary
 Common Words: Top 20 frequently used words
