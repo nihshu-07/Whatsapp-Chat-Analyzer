@@ -144,9 +144,13 @@ if uploaded_file is not None:
                 if selected_user == 'Overall':
                     st.markdown("### 👥 Most Active Users")
                     x, new_df = helper.most_busy_users(df)
-                    fig,ax = plt.subplots(figsize=(12, 6))
                     
-                    ax.bar(x.index,x.values,color ='#667eea')
+                    x = x[x.index != 'group_notification']
+                    new_df = new_df[new_df['user'] != 'group_notification']
+                    
+                    fig, ax = plt.subplots(figsize=(12, 6))
+                    
+                    ax.bar(x.index, x.values, color='#667eea')
                     ax.set_xlabel('User', fontsize=12, color='#64748b', fontweight='bold')
                     ax.set_ylabel('Messages', fontsize=12, color='#64748b', fontweight='bold')
                     plt.xticks(rotation='vertical', color='#64748b')
