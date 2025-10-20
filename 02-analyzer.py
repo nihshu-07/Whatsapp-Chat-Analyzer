@@ -143,14 +143,10 @@ if uploaded_file is not None:
 
                 if selected_user == 'Overall':
                     st.markdown("### 👥 Most Active Users")
-                    x,df = helper.most_busy_users(df)
+                    x, new_df = helper.most_busy_users(df)
+                    fig,ax = plt.subplots(figsize=(12, 6))
                     
-                    x = x[x.index != 'group_notification']
-                    df = df[df['user'] != 'group_notification']
-                    
-                    fig, ax = plt.subplots(figsize=(12, 6))
-                    
-                    ax.bar(x.index, x.values, color='#667eea')
+                    ax.bar(x.index,x.values,color ='#667eea')
                     ax.set_xlabel('User', fontsize=12, color='#64748b', fontweight='bold')
                     ax.set_ylabel('Messages', fontsize=12, color='#64748b', fontweight='bold')
                     plt.xticks(rotation='vertical', color='#64748b')
@@ -160,7 +156,7 @@ if uploaded_file is not None:
                     plt.tight_layout()
                     st.pyplot(fig)
 
-                    st.dataframe(df)
+                    st.dataframe(new_df)
 
                 else:
                     st.info("Not for Specific user")
