@@ -25,8 +25,9 @@ def fetch_stats(selected_user,df):
     return num_messages,len(words),num_media_omitted,len(links)
 
 def most_busy_users(df):
-    x = df['user'].value_counts().head()
-    df = round((df['user'].value_counts()/df.shape[0])*100,2).reset_index().rename(columns={'index' : 'name','user':'Percent'})
+    p_df = df[df['user'] != 'group_notification']
+    x = p_df['user'].value_counts().head()
+    df = round((p_df['user'].value_counts()/p_df.shape[0])*100,2).reset_index().rename(columns={'index' : 'name','user':'Percent'})
     return x,df
 
 def create_wordcloud(selected_user,df):
