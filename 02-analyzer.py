@@ -143,10 +143,10 @@ if uploaded_file is not None:
 
                 if selected_user == 'Overall':
                     st.markdown("### 👥 Most Active Users")
-                    x, new_df = helper.most_busy_users(df)
+                    x,df = helper.most_busy_users(df)
                     
                     x = x[x.index != 'group_notification']
-                    new_df = new_df[new_df['user'] != 'group_notification']
+                    df = df[df['user'] != 'group_notification']
                     
                     fig, ax = plt.subplots(figsize=(12, 6))
                     
@@ -160,7 +160,7 @@ if uploaded_file is not None:
                     plt.tight_layout()
                     st.pyplot(fig)
 
-                    st.dataframe(new_df)
+                    st.dataframe(df)
 
                 else:
                     st.info("Not for Specific user")
