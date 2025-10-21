@@ -11,7 +11,14 @@ WhatsApp Chat Analyzer is an interactive web application that extracts meaningfu
 
 ---
 
-## 👀 Dashboard
+## 🔗Link 
+
+Use the Whatsapp chat analyzer [here](whatsapp-chat-analyzer-14.streamlit.app)
+
+
+---
+
+## 👀 Screenshot
 
 <img width="1919" height="915" alt="image" src="https://github.com/user-attachments/assets/6344368f-8c94-4f0b-a584-05725ca92cd3" />
 
