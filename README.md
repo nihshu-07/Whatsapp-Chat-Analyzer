@@ -13,7 +13,7 @@ WhatsApp Chat Analyzer is an interactive web application that extracts meaningfu
 
 ## 🔗Link 
 
-Use the Whatsapp chat analyzer [here](whatsapp-chat-analyzer-14.streamlit.app)
+Use the Whatsapp chat analyzer [here](https://whatsapp-chat-analyzer-14.streamlit.app/)
 
 
 ---
